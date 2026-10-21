@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pontual Express: motoboys para entregas avulsas e diárias para empresas. Peça sua entrega pelo site." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Pontual Express — Entregas de motoboy</title>
+  </head>
+  <body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- Cena de fundo: decorativa, o leitor de tela ignora -->
+    <div class="cena" aria-hidden="true">
+      <img class="cena__camada cena__ceu" src="/src/assets/cena/ceu.svg" alt="" />
+      <img class="cena__camada cena__casas-fundo" src="/src/assets/cena/casas-fundo.svg" alt="" />
+      <img class="cena__camada cena__casas-frente" src="/src/assets/cena/casas-frente.svg" alt="" />
+      <img class="cena__camada cena__rua" src="/src/assets/cena/rua.svg" alt="" />
+      <img class="cena__motoboy" src="/src/assets/cena/motoboy.svg" alt="" />
+    </div>
+
+    <header class="topo">
+      <div class="container topo__linha">
+        <a class="logo" href="#inicio" aria-label="Pontual Express, voltar ao início">
+          <span class="logo__marca" aria-hidden="true">P</span>
+          <span class="logo__nome">Pontual Express</span>
+        </a>
+        <nav class="topo__nav" aria-label="Seções">
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#diaria">Diária</a>
+          <a href="#trabalhe">Trabalhe conosco</a>
+          <a href="#duvidas">Dúvidas</a>
+        </nav>
+        <a class="botao botao--claro topo__ligar" data-ligar href="#">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          Ligar
+        </a>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="inicio" id="inicio" aria-labelledby="titulo-inicio">
+        <div class="container"><div class="inicio__caixa">
+          <p class="selo">Entregas de motoboy · Avulsas e diárias</p>
+          <h1 id="titulo-inicio">Sua entrega chega na hora.</h1>
+          <p class="inicio__texto">
+            Motoboys de confiança para entregas avulsas e diárias para empresas.
+            Peça pelo site e a central escolhe o motoboy disponível.
+          </p>
+          <div class="acoes">
+            <a class="botao botao--acento" href="#pedido">Solicitar entrega</a>
+            <a class="botao botao--claro" data-ligar href="#">Ligar para a central</a>
+          </div>
+        </div></div>
+      </section>
+
+      <section class="secao" id="como-funciona" aria-labelledby="titulo-como">
+        <div class="container painel">
+          <h2 id="titulo-como">Como funciona</h2>
+          <ol class="passos">
+            <li class="passo">
+              <span class="passo__numero" aria-hidden="true">1</span>
+              <h3>Você faz o pedido</h3>
+              <p>Informe a origem, o destino e o que vai ser entregue. O pedido chega à central pelo WhatsApp.</p>
+            </li>
+            <li class="passo">
+              <span class="passo__numero" aria-hidden="true">2</span>
+              <h3>A central escolhe o motoboy</h3>
+              <p>Direcionamos o motoboy disponível mais adequado. Se não houver, ligamos para combinar.</p>
+            </li>
+            <li class="passo">
+              <span class="passo__numero" aria-hidden="true">3</span>
+              <h3>A entrega acontece</h3>
+              <p>O motoboy retira e entrega no horário combinado.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="secao" id="pedido" aria-labelledby="titulo-pedido">
+        <div class="container painel">
+          <h2 id="titulo-pedido">Solicitar entrega</h2>
+          <p class="secao__intro">Preencha e envie. O WhatsApp abre com o seu pedido já escrito.</p>
+          <form class="formulario" id="form-pedido" novalidate>
+            <div class="campo">
+              <label for="pedido-nome">Seu nome</label>
+              <input id="pedido-nome" name="nome" type="text" autocomplete="name" required />
+            </div>
+            <div class="campo">
+              <label for="pedido-telefone">Telefone ou WhatsApp</label>
+              <input id="pedido-telefone" name="telefone" type="tel" autocomplete="tel" inputmode="tel" required />
+            </div>
+            <div class="campo campo--largo">
+              <label for="pedido-origem">Endereço de retirada</label>
+              <input id="pedido-origem" name="origem" type="text" autocomplete="street-address" required />
+            </div>
+            <div class="campo campo--largo">
+              <label for="pedido-destino">Endereço de entrega</label>
+              <input id="pedido-destino" name="destino" type="text" required />
+            </div>
+            <div class="campo campo--largo">
+              <label for="pedido-item">O que vai ser entregue?</label>
+              <input id="pedido-item" name="item" type="text" placeholder="Ex.: documentos, uma caixa pequena" required />
+            </div>
+            <div class="campo campo--largo">
+              <label for="pedido-obs">Observações <span class="opcional">(opcional)</span></label>
+              <textarea id="pedido-obs" name="observacoes" rows="3"></textarea>
+            </div>
+            <div class="campo campo--largo campo--caixa">
+              <input id="pedido-consentimento" name="consentimento" type="checkbox" required />
+              <label for="pedido-consentimento">
+                Li e concordo com a <a href="privacidade.html">política de privacidade</a>.
+              </label>
+            </div>
+            <div class="campo--largo">
+              <button class="botao botao--acento" type="submit">Solicitar entrega</button>
+            </div>
+          </form>
+          <p class="formulario__alternativa">
+            Prefere falar com alguém? <a data-ligar href="#">Ligue para a central</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="secao" id="diaria" aria-labelledby="titulo-diaria">
+        <div class="container painel">
+          <h2 id="titulo-diaria">Diária de motoboy para empresas</h2>
+          <p class="secao__intro">
+            Precisa de um motoboy dedicado à sua empresa por um dia, uma semana ou um mês?
+            Conte o que precisa e a central responde pelo WhatsApp.
+          </p>
+          <form class="formulario" id="form-diaria" novalidate>
+            <div class="campo">
+              <label for="diaria-empresa">Empresa</label>
+              <input id="diaria-empresa" name="empresa" type="text" autocomplete="organization" required />
+            </div>
+            <div class="campo">
+              <label for="diaria-nome">Seu nome</label>
+              <input id="diaria-nome" name="nome" type="text" autocomplete="name" required />
+            </div>
+            <div class="campo">
+              <label for="diaria-telefone">Telefone ou WhatsApp</label>
+              <input id="diaria-telefone" name="telefone" type="tel" autocomplete="tel" inputmode="tel" required />
+            </div>
+            <div class="campo">
+              <label for="diaria-cidade">Cidade</label>
+              <select id="diaria-cidade" name="cidade" data-cidades required>
+                <option value="">Escolha a cidade</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="diaria-inicio">A partir de</label>
+              <input id="diaria-inicio" name="inicio" type="date" required />
+            </div>
+            <div class="campo">
+              <label for="diaria-periodo">Período</label>
+              <select id="diaria-periodo" name="periodo" required>
+                <option value="">Escolha o período</option>
+                <option>1 dia</option>
+                <option>1 semana</option>
+                <option>1 mês</option>
+                <option>Outro (explico nas observações)</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="diaria-quantidade">Quantos motoboys?</label>
+              <input id="diaria-quantidade" name="quantidade" type="number" min="1" value="1" inputmode="numeric" required />
+            </div>
+            <div class="campo campo--largo">
+              <label for="diaria-obs">Observações <span class="opcional">(opcional)</span></label>
+              <textarea id="diaria-obs" name="observacoes" rows="3"></textarea>
+            </div>
+            <div class="campo campo--largo campo--caixa">
+              <input id="diaria-consentimento" name="consentimento" type="checkbox" required />
+              <label for="diaria-consentimento">
+                Li e concordo com a <a href="privacidade.html">política de privacidade</a>.
+              </label>
+            </div>
+            <div class="campo--largo">
+              <button class="botao" type="submit">Pedir diária</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="secao" id="cidades" aria-labelledby="titulo-cidades">
+        <div class="container painel">
+          <h2 id="titulo-cidades">Cidades atendidas</h2>
+          <ul class="cidades" data-lista-cidades></ul>
+          <p class="secao__nota">Sua cidade não está na lista? <a class="link-forte" data-conversa href="#">Pergunte à central</a>.</p>
+        </div>
+      </section>
+
+      <section class="secao" id="trabalhe" aria-labelledby="titulo-trabalhe">
+        <div class="container painel painel--escuro">
+          <h2 id="titulo-trabalhe">Trabalhe conosco</h2>
+          <p class="secao__intro">
+            É motoboy e quer fazer parte da equipe? Faça seu cadastro.
+            Seus dados de contato e endereço ficam visíveis só para a coordenação.
+          </p>
+          <a class="botao botao--acento" data-formulario-motoboy href="#" target="_blank" rel="noopener">
+            Quero me cadastrar
+          </a>
+          <p class="secao__nota" data-formulario-aviso hidden>O cadastro abre em breve.</p>
+        </div>
+      </section>
+
+      <section class="secao" id="duvidas" aria-labelledby="titulo-duvidas">
+        <div class="container painel">
+          <h2 id="titulo-duvidas">Perguntas frequentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Quanto custa uma entrega?</summary>
+              <p>A central informa o valor antes de confirmar a entrega.</p>
+            </details>
+            <details>
+              <summary>Como funciona a diária?</summary>
+              <p>Você escolhe o período e quantos motoboys precisa. A central combina os detalhes pelo WhatsApp antes de começar.</p>
+            </details>
+            <details>
+              <summary>E se não houver motoboy disponível?</summary>
+              <p>A central entra em contato por telefone para combinar o melhor horário.</p>
+            </details>
+            <details>
+              <summary>Como me cadastro como motoboy?</summary>
+              <p>Use o botão “Quero me cadastrar”, na seção Trabalhe conosco.</p>
+            </details>
+            <details>
+              <summary>Quem vê os meus dados?</summary>
+              <p>Só a equipe da Pontual Express, para atender o seu pedido ou cadastro. Veja a <a href="privacidade.html">política de privacidade</a>.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <div class="container rodape__linha">
+        <p><strong>Pontual Express</strong> · Entregas de motoboy</p>
+        <p>Central: <a data-ligar data-ligar-texto href="#"></a></p>
+        <p><a href="privacidade.html">Política de privacidade</a></p>
+      </div>
+    </footer>
+
+    <a class="conversa" data-conversa href="#" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+      <span>Conversar</span>
+    </a>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

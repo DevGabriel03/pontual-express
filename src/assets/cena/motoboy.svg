@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <ellipse cx="205" cy="288" rx="165" ry="8" fill="#000" opacity=".18"/>
+  <!-- caixa de entrega -->
+  <rect x="44" y="84" width="104" height="88" rx="10" fill="#ffb800" stroke="#0b0b0b" stroke-width="5"/>
+  <rect x="44" y="106" width="104" height="9" fill="#0b0b0b"/>
+  <path d="M84 128h17a12 12 0 0 1 0 24h-7v11H84z" fill="#0b0b0b"/>
+  <circle cx="101" cy="140" r="4" fill="#ffb800"/>
+  <!-- para-lama traseiro -->
+  <path d="M46 228q8-46 74-46l22 18-62 8z" fill="#ffb800" stroke="#0b0b0b" stroke-width="4"/>
+  <!-- rodas -->
+  <g>
+    <circle cx="95" cy="238" r="46" fill="#1b1b1b"/>
+    <circle cx="95" cy="238" r="27" fill="#c9ced3"/>
+    <circle cx="95" cy="238" r="8" fill="#1b1b1b"/>
+  </g>
+  <g>
+    <circle cx="315" cy="238" r="46" fill="#1b1b1b"/>
+    <circle cx="315" cy="238" r="27" fill="#c9ced3"/>
+    <circle cx="315" cy="238" r="8" fill="#1b1b1b"/>
+  </g>
+  <!-- escapamento, balança e motor -->
+  <rect x="58" y="212" width="86" height="13" rx="6" fill="#8a8f94"/>
+  <path d="M95 238l82-24" stroke="#2b2b2b" stroke-width="13" stroke-linecap="round"/>
+  <rect x="158" y="188" width="74" height="46" rx="9" fill="#3a3a3a"/>
+  <!-- garfo dianteiro -->
+  <path d="M296 146l19 92" stroke="#5a5f64" stroke-width="11" stroke-linecap="round"/>
+  <!-- tanque e carenagem -->
+  <path d="M140 202q8-38 62-38l60-4q20 0 24 16l-16 28z" fill="#ffb800" stroke="#0b0b0b" stroke-width="4"/>
+  <!-- banco -->
+  <path d="M112 170l92-7q8 9-2 17l-92 5z" fill="#111"/>
+  <!-- para-lama dianteiro e farol -->
+  <path d="M282 204q33-30 66 0z" fill="#ffb800" stroke="#0b0b0b" stroke-width="4"/>
+  <circle cx="318" cy="164" r="11" fill="#fff2b3" stroke="#111" stroke-width="4"/>
+  <!-- piloto: perna -->
+  <path d="M184 152l52 22-10 40" fill="none" stroke="#1f3a5f" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="232" cy="218" rx="16" ry="8" fill="#111"/>
+  <!-- tronco (jaqueta com faixa refletiva) -->
+  <path d="M182 154l30-58" stroke="#232323" stroke-width="38" stroke-linecap="round"/>
+  <path d="M176 132l30 14" stroke="#e8e8e8" stroke-width="6" stroke-linecap="round"/>
+  <!-- braço -->
+  <path d="M214 102l36 26 36 12" fill="none" stroke="#232323" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- guidão e luva -->
+  <path d="M282 136l24 10" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="288" cy="140" r="9" fill="#111"/>
+  <!-- capacete -->
+  <circle cx="222" cy="66" r="30" fill="#0b0b0b"/>
+  <rect x="230" y="52" width="24" height="18" rx="7" fill="#6ec1ff" opacity=".9"/>
+  <path d="M196 70h20" stroke="#ffb800" stroke-width="5" stroke-linecap="round"/>
+</svg>

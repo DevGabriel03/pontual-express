@@ -1,0 +1,54 @@
+/* Cena fixa atrás do conteúdo. Todas as camadas têm a mesma proporção
+   (3840×1080) e a mesma altura, então ficam alinhadas entre si. */
+.cena {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: var(--ceu);
+  pointer-events: none;
+}
+
+.cena__camada {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  will-change: transform;
+}
+
+/* O motoboy anda na faixa da rua (y 900–1040 de 1080) */
+.cena__motoboy {
+  position: absolute;
+  left: 4vw;
+  bottom: 5.5%;
+  height: 22%;
+  width: auto;
+  max-width: none;
+  will-change: transform;
+}
+
+/* Celular: menos camadas para a rolagem continuar fluida */
+@media (max-width: 767px) {
+  .cena__casas-fundo {
+    display: none;
+  }
+
+  .cena__motoboy {
+    height: 17%;
+  }
+}
+
+/* Versão parada: o motoboy fica no meio da rua */
+@media (prefers-reduced-motion: reduce) {
+  .cena__camada,
+  .cena__motoboy {
+    will-change: auto;
+  }
+
+  .cena__motoboy {
+    left: 40vw;
+  }
+}

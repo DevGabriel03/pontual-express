@@ -1,0 +1,243 @@
+/* Primeira tela: texto sobre o céu, com espaço para ver a rua e o motoboy */
+.inicio {
+  min-height: calc(100svh - 4rem);
+  padding: var(--espaco-4) 0 40svh;
+}
+
+/* Fundo claro atrás do texto para ele não brigar com as casas */
+.inicio__caixa {
+  max-width: 40rem;
+  padding: var(--espaco-3);
+  border-radius: var(--raio);
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(4px);
+}
+
+.selo {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: var(--preto);
+  color: var(--branco);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.inicio h1 {
+  max-width: 14ch;
+}
+
+.inicio__texto {
+  max-width: 38rem;
+  font-size: 1.15rem;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-2);
+  margin-top: var(--espaco-3);
+}
+
+.secao__intro {
+  max-width: 44rem;
+  color: var(--cinza-texto);
+  font-size: 1.05rem;
+}
+
+.painel--escuro .secao__intro {
+  color: #e2e2e2;
+}
+
+.secao__nota {
+  margin: var(--espaco-3) 0 0;
+  color: var(--cinza-texto);
+}
+
+.link-forte {
+  font-weight: 700;
+}
+
+/* Como funciona */
+.passos {
+  list-style: none;
+  margin: var(--espaco-3) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--espaco-3);
+}
+
+@media (min-width: 768px) {
+  .passos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.passo {
+  padding: var(--espaco-3);
+  border-radius: var(--raio);
+  background: var(--cinza-claro);
+}
+
+.passo p {
+  margin: 0;
+  color: var(--cinza-texto);
+}
+
+.passo__numero {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: var(--espaco-2);
+  border-radius: 50%;
+  background: var(--acento);
+  font-weight: 700;
+}
+
+/* Formulários */
+.formulario {
+  display: grid;
+  gap: var(--espaco-2) var(--espaco-3);
+  margin-top: var(--espaco-3);
+}
+
+@media (min-width: 768px) {
+  .formulario {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .campo--largo {
+    grid-column: 1 / -1;
+  }
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.campo label {
+  font-weight: 500;
+}
+
+.opcional {
+  font-weight: 400;
+  color: var(--cinza-texto);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.65rem 0.85rem;
+  border: 2px solid var(--borda);
+  border-radius: 10px;
+  background: var(--branco);
+  color: var(--preto);
+  font: inherit;
+}
+
+.campo input:focus-visible,
+.campo select:focus-visible,
+.campo textarea:focus-visible {
+  border-color: var(--preto);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--acento);
+}
+
+.campo [aria-invalid='true'] {
+  border-color: var(--erro);
+}
+
+.campo--caixa {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--espaco-1);
+  flex-wrap: wrap;
+}
+
+.campo--caixa input {
+  width: 1.4rem;
+  min-height: 1.4rem;
+  height: 1.4rem;
+  margin: 0.1rem 0 0;
+  accent-color: var(--preto);
+  flex-shrink: 0;
+}
+
+.campo--caixa label {
+  flex: 1;
+  font-weight: 400;
+}
+
+.campo--caixa .erro {
+  flex-basis: 100%;
+}
+
+.erro {
+  margin: 0;
+  color: var(--erro);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.formulario__alternativa {
+  margin: var(--espaco-3) 0 0;
+  color: var(--cinza-texto);
+}
+
+/* Cidades */
+.cidades {
+  list-style: none;
+  margin: var(--espaco-2) 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-1);
+}
+
+.cidades li {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--cinza-claro);
+  font-weight: 500;
+}
+
+/* Perguntas frequentes */
+.faq details {
+  border-bottom: 1px solid var(--borda);
+}
+
+.faq summary {
+  padding: var(--espaco-2) 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq details p {
+  color: var(--cinza-texto);
+}
+
+/* Página de privacidade */
+.pagina-simples {
+  background: var(--cinza-claro);
+}
+
+.texto-legal {
+  max-width: 48rem;
+}
+
+.texto-legal h2 {
+  margin-top: var(--espaco-4);
+  font-size: 1.3rem;
+}
+
+.aviso-rascunho {
+  padding: var(--espaco-2);
+  border-left: 6px solid var(--acento);
+  background: #fff6d6;
+  font-weight: 500;
+}
