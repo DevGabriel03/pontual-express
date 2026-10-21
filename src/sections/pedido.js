@@ -1,9 +1,12 @@
 import { config } from '../config.js'
 import { linkWhatsApp } from '../lib/whatsapp.js'
-import { prepararFormulario } from './formulario.js'
+import { prepararFormulario } from '../lib/formulario.js'
+import { ligarEm } from '../lib/contatos.js'
 
 // RF-01: o pedido de entrega abre o WhatsApp da central com a mensagem pronta.
-export function iniciarPedido() {
+export function init() {
+  ligarEm(document.getElementById('pedido'))
+
   const form = document.getElementById('form-pedido')
   if (!form) return
 

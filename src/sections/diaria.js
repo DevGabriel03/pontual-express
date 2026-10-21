@@ -1,6 +1,6 @@
 import { config } from '../config.js'
 import { linkWhatsApp } from '../lib/whatsapp.js'
-import { prepararFormulario } from './formulario.js'
+import { prepararFormulario } from '../lib/formulario.js'
 
 function formatarData(iso) {
   const [ano, mes, dia] = iso.split('-')
@@ -8,7 +8,7 @@ function formatarData(iso) {
 }
 
 // RF-08: o pedido de diária vai pelo mesmo canal do pedido de entrega.
-export function iniciarDiaria() {
+export function init() {
   const form = document.getElementById('form-diaria')
   if (!form) return
 

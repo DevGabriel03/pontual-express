@@ -26,8 +26,11 @@ Base: [brief.md](brief.md) e [requisitos.md](requisitos.md).
 - `vite.config.js`: as 2 páginas e o endereço base do GitHub Pages.
 - `src/config.js`: WhatsApp, telefone, link do Forms e cidades, num lugar só.
 - `src/lib/whatsapp.js`: monta o link `wa.me` com a mensagem.
-- `src/sections/pedido.js`, `diaria.js`, `conversa.js`, `formulario.js`: o comportamento de cada seção.
-- `src/animation/cena.js`: a animação com GSAP.
+- `src/lib/contatos.js`: preenche os links "Ligar" e "Conversar" dentro de um elemento.
+- `src/lib/formulario.js`: validação compartilhada pelos formulários.
+- `src/lib/cena.js`: a animação com GSAP.
+- `src/sections/<secao>.js`: um arquivo por seção, cada um exporta `init()`. São eles: cabecalho, inicio, como-funciona, pedido, diaria, cidades, trabalhe-conosco, perguntas-frequentes, rodape e conversa.
+- `public/img/`, `public/frames/`, `public/fonts/`: arquivos servidos como estão. Por enquanto, vazios.
 - `src/assets/cena/*.svg`: as camadas da ilustração.
 - `src/styles/`: tokens, base, layout, seções e cena.
 

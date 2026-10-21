@@ -1,0 +1,19 @@
+# Texto sempre com fim de linha LF (evita avisos de CRLF no Windows)
+* text=auto eol=lf
+
+# Imagens, vídeos e fontes: binários, o Git não mexe
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.avif binary
+*.gif binary
+*.ico binary
+*.mp4 binary
+*.webm binary
+*.mov binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.pdf binary
