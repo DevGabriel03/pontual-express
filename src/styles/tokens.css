@@ -1,23 +1,59 @@
-/* Cores, espaços e medidas usados no site inteiro. */
+/* Identidade visual — Direção A "Asfalto e faixa".
+   Única fonte de cores, fontes, tamanhos e espaços do site.
+   Decisões e contrastes em docs/identidade.md.
+   As fontes vêm do npm (@fontsource), importadas em src/main.js. */
 :root {
-  --preto: #0b0b0b;
-  --branco: #ffffff;
-  --cinza-claro: #f3f3f3;
-  --cinza-texto: #4a4a4a;
-  --borda: #d6d6d6;
-  --acento: #ffb800;
-  --erro: #b3261e;
-  --ceu: #cfe6f7;
+  /* Cores */
+  --cor-fundo: #f6f5f1; /* Papel */
+  --cor-superficie: #ffffff; /* Branco: cartões e formulários */
+  --cor-texto: #1c1f23; /* Asfalto: texto e fundos escuros */
+  --cor-texto-sec: #565c64; /* Concreto: texto secundário */
+  --cor-destaque: #f2c200; /* Faixa: só botão principal e detalhes, NUNCA texto sobre fundo claro */
+  --cor-borda: #7a8088; /* Meio-fio */
+  --cor-erro: #b3261e; /* Freio */
 
-  --fonte: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  /* Cores derivadas (misturas das cores acima) */
+  --cor-topo: color-mix(in srgb, var(--cor-fundo) 94%, transparent);
+  --cor-texto-hover: color-mix(in srgb, var(--cor-texto) 85%, var(--cor-superficie));
+  --cor-aviso: color-mix(in srgb, var(--cor-destaque) 18%, var(--cor-superficie));
 
-  --espaco-1: 0.5rem;
-  --espaco-2: 1rem;
-  --espaco-3: 1.5rem;
-  --espaco-4: 2.5rem;
-  --espaco-5: 4rem;
+  /* Cor da ilustração de fundo (céu atrás da cena) */
+  --cor-ceu: #cfe6f7;
 
-  --raio: 14px;
-  --sombra: 0 10px 30px rgba(0, 0, 0, 0.12);
+  /* Fontes */
+  --fonte-titulo: 'Archivo', 'Arial Black', system-ui, sans-serif;
+  --fonte-texto: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --peso-texto: 400;
+  --peso-forte: 600;
+  --peso-botao: 700;
+  --peso-titulo: 800;
+
+  /* Escala de tamanhos (proporção 1,25) */
+  --tamanho-1: 0.875rem; /* 14px */
+  --tamanho-2: 1rem; /* 16px */
+  --tamanho-3: 1.25rem; /* 20px */
+  --tamanho-4: 1.5625rem; /* 25px */
+  --tamanho-5: 1.9375rem; /* 31px */
+  --tamanho-6: 2.4375rem; /* 39px */
+  --tamanho-7: 3.0625rem; /* 49px */
+  --tamanho-8: 3.8125rem; /* 61px */
+
+  /* Espaços (escala de 8px, com 4px para ajustes finos) */
+  --espaco-1: 0.25rem; /* 4px */
+  --espaco-2: 0.5rem; /* 8px */
+  --espaco-3: 1rem; /* 16px */
+  --espaco-4: 1.5rem; /* 24px */
+  --espaco-5: 2rem; /* 32px */
+  --espaco-6: 3rem; /* 48px */
+  --espaco-7: 4rem; /* 64px */
+  --espaco-8: 6rem; /* 96px */
+
+  /* Formas: cantos quase retos, sem sombras */
+  --raio: 4px;
+  --borda: 1px solid var(--cor-borda);
+  --faixa-altura: 4px;
+  --faixa-largura: 48px;
+  --altura-controle: 48px;
+
   --largura-max: 1120px;
 }

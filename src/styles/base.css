@@ -11,41 +11,49 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--fonte);
-  font-size: 1rem;
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-2);
+  font-weight: var(--peso-texto);
   line-height: 1.6;
-  color: var(--preto);
-  background: var(--ceu);
+  color: var(--cor-texto);
+  background: var(--cor-ceu);
   overflow-x: hidden;
 }
 
 h1,
 h2,
 h3 {
-  line-height: 1.15;
-  margin: 0 0 var(--espaco-2);
+  font-family: var(--fonte-titulo);
+  font-weight: var(--peso-titulo);
+  line-height: 1.1;
+  margin: 0 0 var(--espaco-3);
 }
 
 h1 {
-  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-size: clamp(var(--tamanho-6), 6vw, var(--tamanho-8));
   letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-size: clamp(var(--tamanho-5), 4vw, var(--tamanho-6));
   letter-spacing: -0.01em;
 }
 
 h3 {
-  font-size: 1.15rem;
+  font-size: var(--tamanho-3);
 }
 
 p {
-  margin: 0 0 var(--espaco-2);
+  margin: 0 0 var(--espaco-3);
 }
 
 a {
   color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+strong {
+  font-weight: var(--peso-forte);
 }
 
 img,
@@ -55,24 +63,24 @@ svg {
 }
 
 :focus-visible {
-  outline: 3px solid var(--preto);
+  outline: 3px solid var(--cor-texto);
   outline-offset: 3px;
-  box-shadow: 0 0 0 6px var(--branco);
+  box-shadow: 0 0 0 6px var(--cor-superficie);
 }
 
 .pular {
   position: absolute;
-  left: var(--espaco-2);
+  left: var(--espaco-3);
   top: -4rem;
   z-index: 100;
-  padding: var(--espaco-1) var(--espaco-2);
-  background: var(--preto);
-  color: var(--branco);
+  padding: var(--espaco-2) var(--espaco-3);
+  background: var(--cor-texto);
+  color: var(--cor-superficie);
   border-radius: var(--raio);
 }
 
 .pular:focus {
-  top: var(--espaco-2);
+  top: var(--espaco-3);
 }
 
 .visualmente-oculto {
@@ -84,46 +92,98 @@ svg {
   white-space: nowrap;
 }
 
+/* Logotipo tipográfico: o nome em Archivo com a faixa amarela embaixo */
+.logo {
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: var(--faixa-altura) solid var(--cor-destaque);
+  font-family: var(--fonte-titulo);
+  font-weight: var(--peso-titulo);
+  font-size: var(--tamanho-3);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
 /* Botões */
 .botao {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--espaco-1);
-  min-height: 48px;
-  padding: 0.75rem 1.4rem;
-  border: 2px solid var(--preto);
-  border-radius: 999px;
-  background: var(--preto);
-  color: var(--branco);
-  font: inherit;
-  font-weight: 700;
+  gap: var(--espaco-2);
+  min-height: var(--altura-controle);
+  padding: 0 var(--espaco-4);
+  border: 2px solid var(--cor-texto);
+  border-radius: var(--raio);
+  background: var(--cor-texto);
+  color: var(--cor-superficie);
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-2);
+  font-weight: var(--peso-botao);
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.15s ease, background 0.15s ease;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
 }
 
 .botao:hover {
   transform: translateY(-1px);
+  background: var(--cor-texto-hover);
 }
 
 .botao--claro {
-  background: var(--branco);
-  color: var(--preto);
+  background: var(--cor-superficie);
+  color: var(--cor-texto);
 }
 
+.botao--claro:hover {
+  background: var(--cor-fundo);
+}
+
+/* Botão principal: amarelo Faixa com texto Asfalto (9,84:1) */
 .botao--acento {
-  background: var(--acento);
-  color: var(--preto);
-  border-color: var(--acento);
+  background: var(--cor-destaque);
+  color: var(--cor-texto);
+  border-color: var(--cor-destaque);
+}
+
+.botao--acento:hover {
+  background: var(--cor-destaque);
+  border-color: var(--cor-texto);
 }
 
 .botao[aria-disabled='true'] {
-  background: var(--cinza-claro);
-  color: var(--cinza-texto);
-  border-color: var(--borda);
+  background: var(--cor-fundo);
+  color: var(--cor-texto-sec);
+  border-color: var(--cor-borda);
   cursor: not-allowed;
   transform: none;
+}
+
+/* Cartão: branco, borda Meio-fio e a faixa amarela no topo */
+.cartao {
+  position: relative;
+  padding: var(--espaco-5) var(--espaco-4) var(--espaco-4);
+  border: var(--borda);
+  border-radius: var(--raio);
+  background: var(--cor-superficie);
+}
+
+.cartao::before {
+  content: '';
+  position: absolute;
+  top: var(--espaco-4);
+  left: var(--espaco-4);
+  width: var(--faixa-largura);
+  height: var(--faixa-altura);
+  background: var(--cor-destaque);
+}
+
+.cartao > :first-child {
+  margin-top: var(--espaco-3);
+}
+
+.cartao > :last-child {
+  margin-bottom: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

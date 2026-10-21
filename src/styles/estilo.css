@@ -1,0 +1,56 @@
+/* Só para estilo.html (guia de estilo). Usa apenas os tokens. */
+.estilo {
+  padding-top: var(--espaco-6);
+  padding-bottom: var(--espaco-8);
+}
+
+.estilo section {
+  margin-bottom: var(--espaco-7);
+}
+
+.estilo-rotulo,
+.estilo-legenda,
+.estilo-secundario {
+  color: var(--cor-texto-sec);
+}
+
+.estilo-rotulo {
+  font-size: var(--tamanho-1);
+}
+
+.estilo-cores {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--espaco-4);
+  font-size: var(--tamanho-1);
+}
+
+.amostra {
+  display: block;
+  height: 80px;
+  margin-bottom: var(--espaco-2);
+  border: var(--borda);
+  border-radius: var(--raio);
+}
+
+.amostra--fundo { background: var(--cor-fundo); }
+.amostra--superficie { background: var(--cor-superficie); }
+.amostra--texto { background: var(--cor-texto); }
+.amostra--texto-sec { background: var(--cor-texto-sec); }
+.amostra--destaque { background: var(--cor-destaque); }
+.amostra--borda { background: var(--cor-borda); }
+.amostra--erro { background: var(--cor-erro); }
+
+.estilo-cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--espaco-4);
+  margin: var(--espaco-6) 0;
+}
+
+.estilo-escuro {
+  padding: var(--espaco-5);
+}

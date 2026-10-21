@@ -1,26 +1,26 @@
 /* Primeira tela: texto sobre o céu, com espaço para ver a rua e o motoboy */
 .inicio {
   min-height: calc(100svh - 4rem);
-  padding: var(--espaco-4) 0 40svh;
+  padding: var(--espaco-6) 0 40svh;
 }
 
-/* Fundo claro atrás do texto para ele não brigar com as casas */
+/* Fundo Papel atrás do texto para ele não brigar com as casas */
 .inicio__caixa {
   max-width: 40rem;
-  padding: var(--espaco-3);
+  padding: var(--espaco-4);
+  border: var(--borda);
   border-radius: var(--raio);
-  background: rgba(255, 255, 255, 0.86);
-  backdrop-filter: blur(4px);
+  background: var(--cor-fundo);
 }
 
 .selo {
   display: inline-block;
-  padding: 0.3rem 0.8rem;
-  border-radius: 999px;
-  background: var(--preto);
-  color: var(--branco);
-  font-size: 0.875rem;
-  font-weight: 500;
+  padding: var(--espaco-1) var(--espaco-3);
+  border-radius: var(--raio);
+  background: var(--cor-texto);
+  color: var(--cor-fundo);
+  font-size: var(--tamanho-1);
+  font-weight: var(--peso-forte);
 }
 
 .inicio h1 {
@@ -29,42 +29,42 @@
 
 .inicio__texto {
   max-width: 38rem;
-  font-size: 1.15rem;
+  font-size: var(--tamanho-3);
 }
 
 .acoes {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--espaco-2);
-  margin-top: var(--espaco-3);
+  gap: var(--espaco-3);
+  margin-top: var(--espaco-4);
 }
 
 .secao__intro {
   max-width: 44rem;
-  color: var(--cinza-texto);
-  font-size: 1.05rem;
+  color: var(--cor-texto-sec);
+  font-size: var(--tamanho-3);
 }
 
 .painel--escuro .secao__intro {
-  color: #e2e2e2;
+  color: var(--cor-fundo);
 }
 
 .secao__nota {
-  margin: var(--espaco-3) 0 0;
-  color: var(--cinza-texto);
+  margin: var(--espaco-4) 0 0;
+  color: var(--cor-texto-sec);
 }
 
 .link-forte {
-  font-weight: 700;
+  font-weight: var(--peso-forte);
 }
 
-/* Como funciona */
+/* Como funciona: cada passo é um .cartao (base.css) */
 .passos {
   list-style: none;
-  margin: var(--espaco-3) 0 0;
+  margin: var(--espaco-4) 0 0;
   padding: 0;
   display: grid;
-  gap: var(--espaco-3);
+  gap: var(--espaco-4);
 }
 
 @media (min-width: 768px) {
@@ -73,33 +73,25 @@
   }
 }
 
-.passo {
-  padding: var(--espaco-3);
-  border-radius: var(--raio);
-  background: var(--cinza-claro);
-}
-
 .passo p {
   margin: 0;
-  color: var(--cinza-texto);
+  color: var(--cor-texto-sec);
 }
 
 .passo__numero {
-  display: grid;
-  place-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  display: block;
   margin-bottom: var(--espaco-2);
-  border-radius: 50%;
-  background: var(--acento);
-  font-weight: 700;
+  font-family: var(--fonte-titulo);
+  font-weight: var(--peso-titulo);
+  font-size: var(--tamanho-5);
+  line-height: 1;
 }
 
 /* Formulários */
 .formulario {
   display: grid;
-  gap: var(--espaco-2) var(--espaco-3);
-  margin-top: var(--espaco-3);
+  gap: var(--espaco-3) var(--espaco-4);
+  margin-top: var(--espaco-4);
 }
 
 @media (min-width: 768px) {
@@ -115,47 +107,47 @@
 .campo {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: var(--espaco-2);
 }
 
 .campo label {
-  font-weight: 500;
+  font-weight: var(--peso-forte);
 }
 
 .opcional {
-  font-weight: 400;
-  color: var(--cinza-texto);
+  font-weight: var(--peso-texto);
+  color: var(--cor-texto-sec);
 }
 
 .campo input,
 .campo select,
 .campo textarea {
   width: 100%;
-  min-height: 48px;
-  padding: 0.65rem 0.85rem;
-  border: 2px solid var(--borda);
-  border-radius: 10px;
-  background: var(--branco);
-  color: var(--preto);
+  min-height: var(--altura-controle);
+  padding: var(--espaco-2) var(--espaco-3);
+  border: 2px solid var(--cor-borda);
+  border-radius: var(--raio);
+  background: var(--cor-superficie);
+  color: var(--cor-texto);
   font: inherit;
 }
 
 .campo input:focus-visible,
 .campo select:focus-visible,
 .campo textarea:focus-visible {
-  border-color: var(--preto);
+  border-color: var(--cor-texto);
   outline: none;
-  box-shadow: 0 0 0 3px var(--acento);
+  box-shadow: 0 0 0 3px var(--cor-destaque);
 }
 
 .campo [aria-invalid='true'] {
-  border-color: var(--erro);
+  border-color: var(--cor-erro);
 }
 
 .campo--caixa {
   flex-direction: row;
   align-items: flex-start;
-  gap: var(--espaco-1);
+  gap: var(--espaco-2);
   flex-wrap: wrap;
 }
 
@@ -164,13 +156,13 @@
   min-height: 1.4rem;
   height: 1.4rem;
   margin: 0.1rem 0 0;
-  accent-color: var(--preto);
+  accent-color: var(--cor-texto);
   flex-shrink: 0;
 }
 
 .campo--caixa label {
   flex: 1;
-  font-weight: 400;
+  font-weight: var(--peso-texto);
 }
 
 .campo--caixa .erro {
@@ -179,51 +171,52 @@
 
 .erro {
   margin: 0;
-  color: var(--erro);
-  font-size: 0.9rem;
-  font-weight: 500;
+  color: var(--cor-erro);
+  font-size: var(--tamanho-1);
+  font-weight: var(--peso-forte);
 }
 
 .formulario__alternativa {
-  margin: var(--espaco-3) 0 0;
-  color: var(--cinza-texto);
+  margin: var(--espaco-4) 0 0;
+  color: var(--cor-texto-sec);
 }
 
 /* Cidades */
 .cidades {
   list-style: none;
-  margin: var(--espaco-2) 0 0;
+  margin: var(--espaco-3) 0 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--espaco-1);
+  gap: var(--espaco-2);
 }
 
 .cidades li {
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  background: var(--cinza-claro);
-  font-weight: 500;
+  padding: var(--espaco-2) var(--espaco-3);
+  border: var(--borda);
+  border-radius: var(--raio);
+  background: var(--cor-fundo);
+  font-weight: var(--peso-forte);
 }
 
 /* Perguntas frequentes */
 .faq details {
-  border-bottom: 1px solid var(--borda);
+  border-bottom: var(--borda);
 }
 
 .faq summary {
-  padding: var(--espaco-2) 0;
-  font-weight: 700;
+  padding: var(--espaco-3) 0;
+  font-weight: var(--peso-forte);
   cursor: pointer;
 }
 
 .faq details p {
-  color: var(--cinza-texto);
+  color: var(--cor-texto-sec);
 }
 
 /* Página de privacidade */
 .pagina-simples {
-  background: var(--cinza-claro);
+  background: var(--cor-fundo);
 }
 
 .texto-legal {
@@ -231,13 +224,13 @@
 }
 
 .texto-legal h2 {
-  margin-top: var(--espaco-4);
-  font-size: 1.3rem;
+  margin-top: var(--espaco-6);
+  font-size: var(--tamanho-4);
 }
 
 .aviso-rascunho {
-  padding: var(--espaco-2);
-  border-left: 6px solid var(--acento);
-  background: #fff6d6;
-  font-weight: 500;
+  padding: var(--espaco-3);
+  border-left: 6px solid var(--cor-destaque);
+  background: var(--cor-aviso);
+  font-weight: var(--peso-forte);
 }

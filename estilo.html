@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Guia de estilo — Pontual Express</title>
+  </head>
+  <!-- Página de conferência da identidade visual. Só para o npm run dev (não entra no build). -->
+  <body class="pagina-simples">
+    <header class="topo">
+      <div class="container topo__linha">
+        <span class="logo">Pontual Express</span>
+        <span class="estilo-rotulo">Guia de estilo · Direção A "Asfalto e faixa"</span>
+      </div>
+    </header>
+
+    <main class="container estilo">
+      <section aria-labelledby="titulo-cores">
+        <h2 id="titulo-cores">Cores</h2>
+        <ul class="estilo-cores">
+          <li><span class="amostra amostra--fundo"></span><strong>Papel</strong> --cor-fundo<br />#F6F5F1 · fundo</li>
+          <li><span class="amostra amostra--superficie"></span><strong>Branco</strong> --cor-superficie<br />#FFFFFF · cartões</li>
+          <li><span class="amostra amostra--texto"></span><strong>Asfalto</strong> --cor-texto<br />#1C1F23 · texto</li>
+          <li><span class="amostra amostra--texto-sec"></span><strong>Concreto</strong> --cor-texto-sec<br />#565C64 · texto secundário</li>
+          <li><span class="amostra amostra--destaque"></span><strong>Faixa</strong> --cor-destaque<br />#F2C200 · destaque</li>
+          <li><span class="amostra amostra--borda"></span><strong>Meio-fio</strong> --cor-borda<br />#7A8088 · borda</li>
+          <li><span class="amostra amostra--erro"></span><strong>Freio</strong> --cor-erro<br />#B3261E · erro</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="titulo-tipografia">
+        <h2 id="titulo-tipografia">Tipografia</h2>
+        <p class="estilo-legenda">Títulos: Archivo 800 · Botões: Archivo 700 · Texto: Inter 400 e 600</p>
+        <h1>Sua entrega chega na hora.</h1>
+        <h2>Diária de motoboy para empresas</h2>
+        <h3>A central escolhe o motoboy</h3>
+        <p>
+          Motoboys de confiança para entregas avulsas e diárias para empresas. Peça pelo site e a
+          central escolhe o motoboy disponível. <strong>Texto em Inter 600.</strong>
+        </p>
+        <p class="estilo-secundario">Texto secundário em Concreto, para notas e explicações curtas.</p>
+        <p><a href="#titulo-componentes">Um link no texto</a>, sempre sublinhado e na cor do texto.</p>
+        <p class="erro">Mensagem de erro: preencha este campo.</p>
+      </section>
+
+      <section aria-labelledby="titulo-componentes">
+        <h2 id="titulo-componentes">Componentes</h2>
+        <div class="acoes">
+          <a class="botao botao--acento" href="#titulo-componentes">Solicitar entrega</a>
+          <a class="botao" href="#titulo-componentes">Pedir diária</a>
+          <a class="botao botao--claro" href="#titulo-componentes">Ligar para a central</a>
+          <a class="botao" role="link" aria-disabled="true">Desativado</a>
+        </div>
+
+        <div class="estilo-cartoes">
+          <article class="cartao">
+            <h3>Entrega avulsa</h3>
+            <p>Informe a origem e o destino. O pedido chega à central pelo WhatsApp.</p>
+          </article>
+          <article class="cartao">
+            <h3>Diária para empresas</h3>
+            <p>Um motoboy dedicado por um dia, uma semana ou um mês.</p>
+          </article>
+        </div>
+
+        <div class="painel painel--escuro estilo-escuro">
+          <h3>Fundo escuro</h3>
+          <p>Texto Papel sobre Asfalto. O amarelo pode ser usado aqui, nunca sobre fundo claro.</p>
+          <a class="botao botao--acento" href="#titulo-componentes">Quero me cadastrar</a>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/estilo.js"></script>
+  </body>
+</html>
